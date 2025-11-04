@@ -1,0 +1,15 @@
+{
+    "target_duration": 5,
+    "topics": [
+        "AI",
+        "Machine Learning",
+        "Deep Learning",
+        "Natural Language Processing"
+    ],
+    "regions": [
+        "us",
+        "gb",
+        "ca"
+    ],
+    "profanity_filter": true
+}

@@ -1,0 +1,4 @@
+dotenv
+.env
+*.env
+.env.*
