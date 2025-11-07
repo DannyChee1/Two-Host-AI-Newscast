@@ -9,7 +9,6 @@ Generate engaging AI-powered podcast newscasts with two dynamic hosts debating a
 - AI Script Generation: OpenAI GPT-4 generates natural dialogue
 - Audio Rendering: Cartesia TTS converts scripts to audio
 - Multiple Formats: JSON, TXT, MP3, JSONL, VTT, and Markdown outputs
-- Easy Setup: Automatic ffmpeg installation for MP3 support
 
 ## Quick Start
 
@@ -17,9 +16,9 @@ Generate engaging AI-powered podcast newscasts with two dynamic hosts debating a
 
 - Python 3.8+
 - API Keys:
-  - [NewsAPI](https://newsapi.org/) - For fetching news
-  - [OpenAI](https://platform.openai.com/) - For script generation
-  - [Cartesia](https://cartesia.ai/) - For text-to-speech
+  - [NewsAPI](https://newsapi.org/)
+  - [OpenAI](https://platform.openai.com/)
+  - [Cartesia](https://cartesia.ai/)
 
 ### Installation
 
@@ -30,24 +29,34 @@ git clone <repository-url>
 cd two-host-ai-newscast
 ```
 
-2. **Install Python dependencies**
+2. **Create and activate a virtual environment (recommended)**
+
+```bash
+python -m venv venv
+
+# Activate on Windows:
+venv\Scripts\activate
+
+# Activate on Linux/Mac:
+source venv/bin/activate
+```
+
+3. **Install dependencies and setup ffmpeg**
 
 ```bash
 pip install -r requirements.txt
-```
-
-3. **Setup ffmpeg for MP3 export** (one command!)
-
-```bash
 python setup_ffmpeg.py
 ```
 
-This automatically downloads and configures ffmpeg (~100 MB, no admin rights needed).
-
 4. **Configure API keys**
 
-Create a `.env` file in the project root:
+Copy `env.example` to `.env` and add your API keys:
 
+```bash
+cp env.example .env
+```
+
+Then edit `.env` with your keys:
 ```env
 NEWSAPI_KEY=your_newsapi_key_here
 OPENAI_API_KEY=your_openai_key_here
@@ -56,17 +65,19 @@ CARTESIA_API_KEY=your_cartesia_key_here
 
 ### Generate Your First Newscast
 
+**Make sure your virtual environment is activated**, then:
+
 ```bash
 python main.py --personas config/personas.json --minutes 5 --topics tech
 ```
 
 This creates in the `out/` directory:
 - `episode.mp3` - Audio podcast
-- `episode_transcript.jsonl` - Timestamped transcript
+- `episode_transcript.jsonl` - Timestamped transcript  
 - `episode.vtt` - WebVTT subtitles
-- `episode_show_notes.md` - Markdown show notes with source links
+- `episode_show_notes.md` - Show notes with source links and summaries
 - `script.json` / `script.txt` - Full script
-- `stories.json` - Source articles
+- `stories.json` - Fetched news stories with summaries
 
 ## Usage Examples
 
@@ -97,9 +108,7 @@ python main.py --personas config/personas.json --output-dir out/episode_001
 ### With Background Music
 
 ```bash
-python main.py --personas config/personas.json \
-  --intro-music assets/intro.mp3 \
-  --outro-music assets/outro.mp3
+python main.py --personas config/personas.json --intro-music assets/intro.mp3 --outro-music assets/outro.mp3
 ```
 
 ### Script Only (No Audio)
@@ -128,7 +137,7 @@ python main.py --personas config/personas.json --skip-audio
 
 ### Customizing Voices
 
-Edit `config/personas.json` to change Cartesia voices:
+Edit `config/personas.json` to change host personalities and voices:
 
 ```json
 {
@@ -149,161 +158,59 @@ Edit `config/personas.json` to change Cartesia voices:
 }
 ```
 
-**Find voices**: Browse the [Cartesia Voice Library](https://play.cartesia.ai/voices)
+Find more voices at [Cartesia Voice Library](https://play.cartesia.ai/voices)
 
 ## Output Structure
-
-After running the generator:
 
 ```
 out/
 ├── episode.mp3                    # Final audio podcast
-├── episode_transcript.jsonl       # Timestamped transcript (one JSON per line)
-├── episode.vtt                    # WebVTT subtitles with timestamps
+├── episode_transcript.jsonl       # Timestamped transcript
+├── episode.vtt                    # WebVTT subtitles
 ├── episode_show_notes.md          # Show notes with source links
 ├── script.json                    # Structured script data
 ├── script.txt                     # Human-readable script
 └── stories.json                   # Fetched news stories
 ```
 
-### Output Formats
-
-**1. Audio (MP3/WAV)**
-- High-quality audio with natural-sounding voices
-- Configurable pauses between dialogue
-- Optional intro/outro music
-
-**2. Transcript (JSONL)**
-```json
-{"t": 0.0, "speaker": "Ben", "text": "Hey everyone, welcome back!", "src": [0]}
-{"t": 5.2, "speaker": "Jerry", "text": "Trust me, it's a game-changer.", "src": []}
-```
-
-**3. Subtitles (VTT)**
-```
-WEBVTT
-
-1
-00:00:00.000 --> 00:00:05.200
-<v Ben>Hey everyone, welcome back! You won't believe what DJI just dropped [src: 0].
-
-2
-00:00:06.200 --> 00:00:09.400
-<v Jerry>Trust me, it's a game-changer for smartphone filmmakers.
-```
-
-**4. Show Notes (Markdown)**
-- Episode description
-- Topics covered with summaries
-- Clickable source links
-- Host information
-
 ## Testing
 
 ```bash
-# Test audio rendering (MP3 & WAV)
+# Test audio rendering
 python tests/test_audio_rendering.py
 
-# Test output formats (JSONL, VTT, Markdown)
+# Test output formats
 python tests/test_output_formats.py
 
 # Full integration test
 python tests/test_newscast.py
 ```
 
-## Architecture
-
-### Pipeline
+## Project Structure
 
 ```
-1. News Fetching (NewsAPI)
-   ↓
-2. Script Generation (OpenAI GPT-4)
-   ↓
-3. Audio Rendering (Cartesia TTS)
-   ↓
-4. Output Generation (JSONL, VTT, Markdown)
-```
-
-### Modules
-
-- **`src/news.py`** - Fetches and validates news from NewsAPI
-- **`src/script_generator.py`** - Generates dialogue using OpenAI
-- **`src/audio_renderer.py`** - Converts script to audio using Cartesia
-- **`src/output_writer.py`** - Generates JSONL, VTT, and Markdown outputs
-- **`src/main.py`** - Orchestrates the complete pipeline
-- **`config/personas.json`** - Host personality and voice configuration
-- **`setup_ffmpeg.py`** - Automatic ffmpeg setup for MP3 support
-
-## Cost Estimation
-
-Approximate cost per 5-minute newscast:
-
-- **NewsAPI**: Free (up to 100 requests/day)
-- **OpenAI GPT-4**: ~$0.10 - $0.30
-- **Cartesia TTS**: ~$0.08 - $0.15
-
-**Total**: ~$0.18 - $0.45 per episode
-
-### Cost Optimization
-
-1. Use `--skip-audio` during script development
-2. Cache news stories for multiple script iterations
-3. Use shorter durations (`--minutes 3`) for testing
-4. Batch generate multiple episodes
-
-## Background Music (Optional)
-
-Add intro/outro music with proper licensing:
-
-### Recommended Sources
-
-- **[FreePD](https://freepd.com/)** - Public Domain (CC0)
-- **[Incompetech](https://incompetech.com/)** - Creative Commons BY 3.0
-- **[YouTube Audio Library](https://youtube.com/audiolibrary)** - Various licenses
-- **[Bensound](https://bensound.com/)** - Creative Commons BY-ND
-- **[Purple Planet](https://purple-planet.com/)** - Creative Commons BY 4.0
-
-Always check licenses and provide proper attribution!
-
-## Troubleshooting
-
-### MP3 Export Not Working
-
-```bash
-# Run automatic setup
-python setup_ffmpeg.py
-
-# Or use WAV format
-python main.py --personas config/personas.json --audio-format wav
-```
-
-### Missing API Keys
+two-host-ai-newscast/
+├── main.py                        # Entry point
+├── src/
+│   ├── news.py                    # News fetching and validation
+│   ├── script_generator.py        # AI script generation
+│   ├── audio_renderer.py          # Text-to-speech rendering
+│   ├── output_writer.py           # Generate outputs (JSONL, VTT, MD)
+│   └── main.py                    # Main orchestration
+├── config/
+│   ├── personas.json              # Host personalities and voices
+│   └── config.json                # Default configuration
+├── tests/                         # Test files
+├── requirements.txt               # Python dependencies
+└── setup_ffmpeg.py               # Automatic ffmpeg setup
 
 ```
-Error: Missing required API keys in .env file
-```
 
-**Solution**: Create `.env` file with all three API keys (see Installation section)
+## License & Credits
 
-### Module Not Found
+This project uses:
+- [NewsAPI](https://newsapi.org/) for news fetching
+- [OpenAI GPT-4](https://openai.com/) for script generation
+- [Cartesia](https://cartesia.ai/) for text-to-speech
 
-```bash
-pip install -r requirements.txt
-```
-
-### Python 3.13 Audio Issues
-
-The `audioop-lts` package is automatically installed for Python 3.13 compatibility.
-
-## Acceptance Checklist
-
-- Runs with `.env` keys for NEWSAPI_KEY, OPENAI_API_KEY, CARTESIA_API_KEY
-- Produces MP3, transcript (JSONL + VTT), and show notes with source links
-- Dialogue shows clear, consistent personalities and cites sources via `[src: i]`
-- No obvious hallucinations; facts match links (requires manual verification)
-
-## Credits
-
-Powered by NewsAPI, OpenAI GPT-4, and Cartesia TTS.
-
+**Disclaimer**: This tool generates AI content for informational and entertainment purposes. The voices are synthetic and do not represent real individuals. Always verify facts from original sources.

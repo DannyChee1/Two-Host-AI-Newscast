@@ -31,9 +31,7 @@ class AudioRenderError(Exception):
 
 
 def map_hosts_to_voices(personas: Dict) -> Dict[str, str]:
-
     voice_map = {}
-    
     for host in personas.get('hosts', []):
         name = host.get('name')
         voice_id = host.get('voice_id', '').strip()
@@ -49,12 +47,23 @@ def map_hosts_to_voices(personas: Dict) -> Dict[str, str]:
     return voice_map
 
 
+def preprocess_text_for_tts(text: str) -> str:
+    text = re.sub(r'\[src:\s*\d+\]', '', text).strip()
+    text = re.sub(r'\s+and\s+([A-Z])', r', and \1', text)
+    text = re.sub(r'\s+but\s+([A-Z])', r', but \1', text)
+    text = re.sub(r'\?(\w)', r'? \1', text)
+    text = re.sub(r'!(\w)', r'! \1', text)
+    text = re.sub(r'\s+', ' ', text)
+    return text.strip()
+
+
 def generate_speech(
     text: str,
     voice_id: str,
     client: Cartesia,
     model: str = "sonic-english",
-    output_format: Dict = None
+    output_format: Dict = None,
+    speaker_name: str = ""
 ) -> bytes:
     if output_format is None:
         output_format = {
@@ -63,19 +72,33 @@ def generate_speech(
             "sample_rate": 44100
         }
 
+    processed_text = preprocess_text_for_tts(text)
+    
+    voice_config = {
+        "mode": "id", 
+        "id": voice_id
+    }
+    
+    try:
+        text_length = len(processed_text.split())
+        if text_length < 10:
+            speed = "fast"
+        elif text_length > 50:
+            speed = "slow"
+        else:
+            speed = "normal"
+            
+        voice_config["__experimental_controls"] = {
+            "speed": speed
+        }
+    except:
+        pass
 
     try:
         response = client.tts.bytes(
             model_id=model,
-            transcript=text,
-            voice={
-                "mode": "id", 
-                "id": voice_id,
-                "__experimental_controls": {
-                    "speed": "normal",
-                    "emotion": ["positivity:high", "curiosity:high"]
-                }
-            },
+            transcript=processed_text,
+            voice=voice_config,
             output_format=output_format
         )
 
@@ -96,18 +119,14 @@ def load_background_music(file_path: str, duration_ms: int) -> Optional[AudioSeg
     
     try:
         music = AudioSegment.from_file(file_path)
-        
         if len(music) > duration_ms:
             music = music[:duration_ms]
         elif len(music) < duration_ms:
             repeats = (duration_ms // len(music)) + 1
             music = music * repeats
             music = music[:duration_ms]
-
         music = music - 20
-
         return music
-        
     except Exception as e:
         print(f"Warning: Could not load background music from {file_path}: {e}")
         return None
@@ -160,17 +179,17 @@ def render_audio(
         
         voice_id = voice_map[speaker]
         
-        # Remove source citations [src: N] from spoken text
-        text_for_speech = re.sub(r'\[src:\s*\d+\]', '', text).strip()
+        text_display = re.sub(r'\[src:\s*\d+\]', '', text).strip()
         
-        print(f"   Line {i}/{len(script['dialogue'])}: {speaker} - \"{text[:50]}{'...' if len(text) > 50 else ''}\"")
+        print(f"   Line {i}/{len(script['dialogue'])}: {speaker} - \"{text_display[:50]}{'...' if len(text_display) > 50 else ''}\"")
         
         try:
             audio_bytes = generate_speech(
-                text=text_for_speech,
+                text=text,
                 voice_id=voice_id,
                 client=client,
-                output_format=output_format
+                output_format=output_format,
+                speaker_name=speaker
             )
 
             audio = AudioSegment.from_wav(io.BytesIO(audio_bytes))

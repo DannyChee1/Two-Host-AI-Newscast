@@ -15,7 +15,6 @@ def fetch_news(
     max_stories: int = 5,
     hours_back: int = 24
 ) -> List[Dict]:
-
     to_date = datetime.now()
     from_date = to_date - timedelta(hours=hours_back)
     from_str = from_date.strftime('%Y-%m-%dT%H:%M:%S')
