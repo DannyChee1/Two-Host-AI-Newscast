@@ -1,5 +1,5 @@
 # Ignore all audio files in assets directory
-*.mp3
+
 *.wav
 *.ogg
 *.flac

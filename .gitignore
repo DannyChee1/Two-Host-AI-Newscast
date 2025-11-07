@@ -48,7 +48,6 @@ ffmpeg/
 ffmpeg.zip
 
 # Audio files
-*.mp3
 *.wav
 *.ogg
 *.flac
