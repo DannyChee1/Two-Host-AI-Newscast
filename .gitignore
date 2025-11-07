@@ -40,7 +40,6 @@ wheels/
 Thumbs.db
 
 # Project specific
-out/
 output/
 tests/test_output/
 
