@@ -4,82 +4,45 @@ TWO-HOST NEWSCAST SCRIPT
 
 RUNDOWN:
   - cold_open: ~60s
-  - story_0: ~130s
+  - story_0: ~140s
   - story_1: ~130s
-  - story_2: ~140s
-  - story_3: ~100s
-  - story_4: ~90s
   - kicker: ~40s
 
 
 [[ COLD OPEN ]]
 
-Ben: Hey hey, welcome back! We've got some juicy stories to dive into today.
-Jerry: Yeah, definitely. Starting with the ongoing Disney and YouTube TV drama. It's heating up!
-Ben: Right, and it's wild because Disney's trying to play the underdog here [src: 0].
-Jerry: But according to some polls, YouTube might actually have the upper hand [src: 0].
+Ben: Hey folks!
+Jerry: Today, we've got some crazy stories lined up. From cutting-edge cameras to social media bans. It's gonna be a wild ride!
+Ben: And let's not forget about the federal government possibly keeping tabs on us at football games. Seriously, what a time to be alive!
+Jerry: Yeah, and classic gamers, you're gonna want to stick around for our last story. Nostalgia, anyone?
+Ben: Alright, let's dive in!
 
 [[ STORY 0 ]]
 
-Ben: Okay, let’s jump right in. What's the latest with Disney and YouTube TV?
-Jerry: So Disney's been in a contract standoff with YouTube TV. They've been trying to rally public support by painting themselves as the underdog [src: 0].
-Ben: Underdog? Disney? That's a new angle.
-Jerry: Right? But the thing is, despite their efforts, polling suggests YouTube might actually be winning the PR battle [src: 0].
-Ben: Interesting. You know, it's kind of like David versus Goliath, but where Goliath is pretending to be David.
-Jerry: Exactly. And with the reach of YouTube, they're able to counteract Disney's narrative pretty effectively.
-Ben: So what's at stake here?
-Jerry: It's all about contract negotiations, really. If they can't find common ground soon, customers might take the hit, losing access to Disney content on YouTube TV [src: 0].
-Ben: Man, negotiations in this industry are never straightforward, are they?
-Jerry: Nope, and it's always the consumers who get caught in the crossfire.
+Ben: First up, Leica, the legend in photography, has just launched the SL3 Reporter. It's got this super tough aramid fabric, making it ideal for rugged environments [src: 0].
+Jerry: Aramid fabric? So they're basically taking cues from bulletproof vests now?
+Ben: Pretty much! It's designed to withstand extreme conditions, which is a game-changer for photojournalists who are often in the thick of things [src: 0].
+Jerry: But hold on, how does this really impact the everyday consumer? I mean, is everyone ready to shell out for such a high-end tool?
+Ben: Fair question. The SL3 is definitely geared towards professionals. But here's the thing, it's innovations like these that eventually trickle down to consumer tech, you know?
+Jerry: True, and the tech's rugged design could inspire more durable consumer products.
+Ben: Exactly! Plus, this could push other brands to innovate in the same direction, making photography more accessible in different environments.
 
 [[ STORY 1 ]]
 
-Ben: Alright, what's next on our list?
-Jerry: Next up is the Zero Gravity Summit in Salt Lake City [src: 1].
-Ben: Oh, I love this stuff. Tech, innovation, and all that good future-y stuff.
-Jerry: It's a big event, bringing together policymakers and innovators to discuss dual-use technology and national security [src: 1].
-Ben: And dual-use, meaning tech that's good for both civilian and military applications, right?
-Jerry: Exactly. They're focusing on energy and flight this year [src: 1].
-Ben: Energy and flight, huh? That’s a killer combo.
-Jerry: Yeah, and they’re exploring how these innovations can shape the future of national security [src: 1].
-Ben: Super fascinating. I mean, it's exactly what we need to be looking into right now.
-Jerry: Absolutely. These are the kind of conversations that determine where the technology is headed.
-
-[[ STORY 2 ]]
-
-Ben: Now, let's talk about the trillion-dollar pay package for Elon Musk. Can you believe it?
-Jerry: I was just about to say—Tesla's shareholders approved it, and it's honestly mind-boggling [src: 2].
-Ben: Yeah, but here's the thing—it's not just a regular salary, right?
-Jerry: Right, it’s structured as this massive incentive package tied to Tesla's performance [src: 2].
-Ben: So basically, if Tesla performs, he gets paid, big time.
-Jerry: Exactly. But it makes you wonder about the messaging there. Like, should a CEO really earn that much?
-Ben: I mean, he's betting on himself and Tesla's future. That's pretty bold.
-Jerry: Bold, but it also brings up questions about income disparity and corporate ethics [src: 2].
-Ben: For sure. It's a complex issue, no easy answers.
-
-[[ STORY 4 ]]
-
-Jerry: Speaking of complexity, let's touch on how Celonis is helping CIE with their ERP systems [src: 4].
-Ben: ERP? Enterprise Resource Planning, right?
-Jerry: That's the one. CIE Automotive needed to streamline their ERP for better operational clarity [src: 4].
-Ben: And Celonis is like the fixer here?
-Jerry: Pretty much. They're helping to integrate and manage CIE’s core business processes [src: 4].
-Ben: That's got to be a huge relief for CIE.
-Jerry: For sure. It allows them to operate with more clarity and efficiency.
-
-[[ STORY 3 ]]
-
-Ben: Okay, wrapping up with the Elon Musk trillion-dollar messiah angle from The Irish Times [src: 3].
-Jerry: It's funny how they called him that, but there's also concern about his political stances impacting Tesla's profits [src: 3].
-Ben: I know, right? It’s like celebrity CEO meets controversy.
-Jerry: Yeah, and the consumer backlash is real [src: 3].
-Ben: Tesla is definitely navigating tricky waters here.
-Jerry: Absolutely, and it's one more reason why corporate leadership needs careful balancing.
+Jerry: Switching gears, Denmark's government is making a bold move to ban social media for those under 15 [src: 1].
+Ben: Whoa, that's huge. I mean, it's necessary to protect kids from all the chaos out there, but this feels like such a drastic step!
+Jerry: But if you think about it, it addresses these growing concerns about kids' mental health and privacy. Big Tech's influence is everywhere [src: 1].
+Ben: Yeah, but enforcing this? That's a whole other challenge. You know how tech-savvy kids are these days.
+Jerry: True, but maybe this forces platforms to rethink how they engage younger audiences. It could set a precedent.
+Ben: Plus, it's a wake-up call. Maybe parents and schools will play bigger roles in guiding kids' online lives.
 
 [[ KICKER ]]
 
-Ben: Alright, that's our rundown.
-Jerry: Hope you enjoyed digging into these stories with us.
-Ben: Catch you next time, folks!
+Ben: And now, for all you retro gaming fans out there, good news! Intellivision Sprint preorders are live. Get ready for some nostalgia [src: 4].
+Jerry: So we're talking about a return to the golden era of home gaming, right?
+Ben: Exactly! It's a chance for gamers to experience that classic vibe. And you know, it might just appeal to the younger crowd as well.
+Jerry: Nice way to bridge the generation gap in gaming.
+Ben: Definitely! And it's always fun to revisit those old-school graphics and gameplay.
+Jerry: Well, that's all for today, folks. Stay curious!
 
 ============================================================

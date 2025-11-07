@@ -6,23 +6,11 @@
     },
     {
       "segment": "story_0",
-      "duration_estimate": 130
+      "duration_estimate": 140
     },
     {
       "segment": "story_1",
       "duration_estimate": 130
-    },
-    {
-      "segment": "story_2",
-      "duration_estimate": 140
-    },
-    {
-      "segment": "story_3",
-      "duration_estimate": 100
-    },
-    {
-      "segment": "story_4",
-      "duration_estimate": 90
     },
     {
       "segment": "kicker",
@@ -32,107 +20,83 @@
   "dialogue": [
     {
       "speaker": "Ben",
-      "text": "Hey hey, welcome back! We've got some juicy stories to dive into today.",
+      "text": "Hey folks!",
       "segment": "cold_open",
       "sources": []
     },
     {
       "speaker": "Jerry",
-      "text": "Yeah, definitely. Starting with the ongoing Disney and YouTube TV drama. It's heating up!",
+      "text": "Today, we've got some crazy stories lined up. From cutting-edge cameras to social media bans. It's gonna be a wild ride!",
       "segment": "cold_open",
       "sources": []
     },
     {
       "speaker": "Ben",
-      "text": "Right, and it's wild because Disney's trying to play the underdog here [src: 0].",
+      "text": "And let's not forget about the federal government possibly keeping tabs on us at football games. Seriously, what a time to be alive!",
       "segment": "cold_open",
-      "sources": [
-        0
-      ]
+      "sources": []
     },
     {
       "speaker": "Jerry",
-      "text": "But according to some polls, YouTube might actually have the upper hand [src: 0].",
+      "text": "Yeah, and classic gamers, you're gonna want to stick around for our last story. Nostalgia, anyone?",
       "segment": "cold_open",
-      "sources": [
-        0
-      ]
-    },
-    {
-      "speaker": "Ben",
-      "text": "Okay, let\u2019s jump right in. What's the latest with Disney and YouTube TV?",
-      "segment": "story_0",
       "sources": []
     },
     {
-      "speaker": "Jerry",
-      "text": "So Disney's been in a contract standoff with YouTube TV. They've been trying to rally public support by painting themselves as the underdog [src: 0].",
-      "segment": "story_0",
-      "sources": [
-        0
-      ]
-    },
-    {
       "speaker": "Ben",
-      "text": "Underdog? Disney? That's a new angle.",
-      "segment": "story_0",
+      "text": "Alright, let's dive in!",
+      "segment": "cold_open",
       "sources": []
     },
     {
-      "speaker": "Jerry",
-      "text": "Right? But the thing is, despite their efforts, polling suggests YouTube might actually be winning the PR battle [src: 0].",
+      "speaker": "Ben",
+      "text": "First up, Leica, the legend in photography, has just launched the SL3 Reporter. It's got this super tough aramid fabric, making it ideal for rugged environments [src: 0].",
       "segment": "story_0",
       "sources": [
         0
       ]
     },
     {
-      "speaker": "Ben",
-      "text": "Interesting. You know, it's kind of like David versus Goliath, but where Goliath is pretending to be David.",
-      "segment": "story_0",
-      "sources": []
-    },
-    {
       "speaker": "Jerry",
-      "text": "Exactly. And with the reach of YouTube, they're able to counteract Disney's narrative pretty effectively.",
+      "text": "Aramid fabric? So they're basically taking cues from bulletproof vests now?",
       "segment": "story_0",
       "sources": []
     },
     {
       "speaker": "Ben",
-      "text": "So what's at stake here?",
-      "segment": "story_0",
-      "sources": []
-    },
-    {
-      "speaker": "Jerry",
-      "text": "It's all about contract negotiations, really. If they can't find common ground soon, customers might take the hit, losing access to Disney content on YouTube TV [src: 0].",
+      "text": "Pretty much! It's designed to withstand extreme conditions, which is a game-changer for photojournalists who are often in the thick of things [src: 0].",
       "segment": "story_0",
       "sources": [
         0
       ]
     },
     {
-      "speaker": "Ben",
-      "text": "Man, negotiations in this industry are never straightforward, are they?",
-      "segment": "story_0",
-      "sources": []
-    },
-    {
       "speaker": "Jerry",
-      "text": "Nope, and it's always the consumers who get caught in the crossfire.",
+      "text": "But hold on, how does this really impact the everyday consumer? I mean, is everyone ready to shell out for such a high-end tool?",
       "segment": "story_0",
       "sources": []
     },
     {
       "speaker": "Ben",
-      "text": "Alright, what's next on our list?",
-      "segment": "story_1",
+      "text": "Fair question. The SL3 is definitely geared towards professionals. But here's the thing, it's innovations like these that eventually trickle down to consumer tech, you know?",
+      "segment": "story_0",
       "sources": []
     },
     {
       "speaker": "Jerry",
-      "text": "Next up is the Zero Gravity Summit in Salt Lake City [src: 1].",
+      "text": "True, and the tech's rugged design could inspire more durable consumer products.",
+      "segment": "story_0",
+      "sources": []
+    },
+    {
+      "speaker": "Ben",
+      "text": "Exactly! Plus, this could push other brands to innovate in the same direction, making photography more accessible in different environments.",
+      "segment": "story_0",
+      "sources": []
+    },
+    {
+      "speaker": "Jerry",
+      "text": "Switching gears, Denmark's government is making a bold move to ban social media for those under 15 [src: 1].",
       "segment": "story_1",
       "sources": [
         1
@@ -140,27 +104,13 @@
     },
     {
       "speaker": "Ben",
-      "text": "Oh, I love this stuff. Tech, innovation, and all that good future-y stuff.",
+      "text": "Whoa, that's huge. I mean, it's necessary to protect kids from all the chaos out there, but this feels like such a drastic step!",
       "segment": "story_1",
       "sources": []
     },
     {
       "speaker": "Jerry",
-      "text": "It's a big event, bringing together policymakers and innovators to discuss dual-use technology and national security [src: 1].",
-      "segment": "story_1",
-      "sources": [
-        1
-      ]
-    },
-    {
-      "speaker": "Ben",
-      "text": "And dual-use, meaning tech that's good for both civilian and military applications, right?",
-      "segment": "story_1",
-      "sources": []
-    },
-    {
-      "speaker": "Jerry",
-      "text": "Exactly. They're focusing on energy and flight this year [src: 1].",
+      "text": "But if you think about it, it addresses these growing concerns about kids' mental health and privacy. Big Tech's influence is everywhere [src: 1].",
       "segment": "story_1",
       "sources": [
         1
@@ -168,195 +118,57 @@
     },
     {
       "speaker": "Ben",
-      "text": "Energy and flight, huh? That\u2019s a killer combo.",
+      "text": "Yeah, but enforcing this? That's a whole other challenge. You know how tech-savvy kids are these days.",
       "segment": "story_1",
       "sources": []
     },
     {
       "speaker": "Jerry",
-      "text": "Yeah, and they\u2019re exploring how these innovations can shape the future of national security [src: 1].",
-      "segment": "story_1",
-      "sources": [
-        1
-      ]
-    },
-    {
-      "speaker": "Ben",
-      "text": "Super fascinating. I mean, it's exactly what we need to be looking into right now.",
-      "segment": "story_1",
-      "sources": []
-    },
-    {
-      "speaker": "Jerry",
-      "text": "Absolutely. These are the kind of conversations that determine where the technology is headed.",
+      "text": "True, but maybe this forces platforms to rethink how they engage younger audiences. It could set a precedent.",
       "segment": "story_1",
       "sources": []
     },
     {
       "speaker": "Ben",
-      "text": "Now, let's talk about the trillion-dollar pay package for Elon Musk. Can you believe it?",
-      "segment": "story_2",
-      "sources": []
-    },
-    {
-      "speaker": "Jerry",
-      "text": "I was just about to say\u2014Tesla's shareholders approved it, and it's honestly mind-boggling [src: 2].",
-      "segment": "story_2",
-      "sources": [
-        2
-      ]
-    },
-    {
-      "speaker": "Ben",
-      "text": "Yeah, but here's the thing\u2014it's not just a regular salary, right?",
-      "segment": "story_2",
-      "sources": []
-    },
-    {
-      "speaker": "Jerry",
-      "text": "Right, it\u2019s structured as this massive incentive package tied to Tesla's performance [src: 2].",
-      "segment": "story_2",
-      "sources": [
-        2
-      ]
-    },
-    {
-      "speaker": "Ben",
-      "text": "So basically, if Tesla performs, he gets paid, big time.",
-      "segment": "story_2",
-      "sources": []
-    },
-    {
-      "speaker": "Jerry",
-      "text": "Exactly. But it makes you wonder about the messaging there. Like, should a CEO really earn that much?",
-      "segment": "story_2",
+      "text": "Plus, it's a wake-up call. Maybe parents and schools will play bigger roles in guiding kids' online lives.",
+      "segment": "story_1",
       "sources": []
     },
     {
       "speaker": "Ben",
-      "text": "I mean, he's betting on himself and Tesla's future. That's pretty bold.",
-      "segment": "story_2",
-      "sources": []
-    },
-    {
-      "speaker": "Jerry",
-      "text": "Bold, but it also brings up questions about income disparity and corporate ethics [src: 2].",
-      "segment": "story_2",
-      "sources": [
-        2
-      ]
-    },
-    {
-      "speaker": "Ben",
-      "text": "For sure. It's a complex issue, no easy answers.",
-      "segment": "story_2",
-      "sources": []
-    },
-    {
-      "speaker": "Jerry",
-      "text": "Speaking of complexity, let's touch on how Celonis is helping CIE with their ERP systems [src: 4].",
-      "segment": "story_4",
-      "sources": [
-        4
-      ]
-    },
-    {
-      "speaker": "Ben",
-      "text": "ERP? Enterprise Resource Planning, right?",
-      "segment": "story_4",
-      "sources": []
-    },
-    {
-      "speaker": "Jerry",
-      "text": "That's the one. CIE Automotive needed to streamline their ERP for better operational clarity [src: 4].",
-      "segment": "story_4",
-      "sources": [
-        4
-      ]
-    },
-    {
-      "speaker": "Ben",
-      "text": "And Celonis is like the fixer here?",
-      "segment": "story_4",
-      "sources": []
-    },
-    {
-      "speaker": "Jerry",
-      "text": "Pretty much. They're helping to integrate and manage CIE\u2019s core business processes [src: 4].",
-      "segment": "story_4",
-      "sources": [
-        4
-      ]
-    },
-    {
-      "speaker": "Ben",
-      "text": "That's got to be a huge relief for CIE.",
-      "segment": "story_4",
-      "sources": []
-    },
-    {
-      "speaker": "Jerry",
-      "text": "For sure. It allows them to operate with more clarity and efficiency.",
-      "segment": "story_4",
-      "sources": []
-    },
-    {
-      "speaker": "Ben",
-      "text": "Okay, wrapping up with the Elon Musk trillion-dollar messiah angle from The Irish Times [src: 3].",
-      "segment": "story_3",
-      "sources": [
-        3
-      ]
-    },
-    {
-      "speaker": "Jerry",
-      "text": "It's funny how they called him that, but there's also concern about his political stances impacting Tesla's profits [src: 3].",
-      "segment": "story_3",
-      "sources": [
-        3
-      ]
-    },
-    {
-      "speaker": "Ben",
-      "text": "I know, right? It\u2019s like celebrity CEO meets controversy.",
-      "segment": "story_3",
-      "sources": []
-    },
-    {
-      "speaker": "Jerry",
-      "text": "Yeah, and the consumer backlash is real [src: 3].",
-      "segment": "story_3",
-      "sources": [
-        3
-      ]
-    },
-    {
-      "speaker": "Ben",
-      "text": "Tesla is definitely navigating tricky waters here.",
-      "segment": "story_3",
-      "sources": []
-    },
-    {
-      "speaker": "Jerry",
-      "text": "Absolutely, and it's one more reason why corporate leadership needs careful balancing.",
-      "segment": "story_3",
-      "sources": []
-    },
-    {
-      "speaker": "Ben",
-      "text": "Alright, that's our rundown.",
+      "text": "And now, for all you retro gaming fans out there, good news! Intellivision Sprint preorders are live. Get ready for some nostalgia [src: 4].",
       "segment": "kicker",
-      "sources": []
+      "sources": [
+        4
+      ]
     },
     {
       "speaker": "Jerry",
-      "text": "Hope you enjoyed digging into these stories with us.",
+      "text": "So we're talking about a return to the golden era of home gaming, right?",
       "segment": "kicker",
       "sources": []
     },
     {
       "speaker": "Ben",
-      "text": "Catch you next time, folks!",
+      "text": "Exactly! It's a chance for gamers to experience that classic vibe. And you know, it might just appeal to the younger crowd as well.",
+      "segment": "kicker",
+      "sources": []
+    },
+    {
+      "speaker": "Jerry",
+      "text": "Nice way to bridge the generation gap in gaming.",
+      "segment": "kicker",
+      "sources": []
+    },
+    {
+      "speaker": "Ben",
+      "text": "Definitely! And it's always fun to revisit those old-school graphics and gameplay.",
+      "segment": "kicker",
+      "sources": []
+    },
+    {
+      "speaker": "Jerry",
+      "text": "Well, that's all for today, folks. Stay curious!",
       "segment": "kicker",
       "sources": []
     }
