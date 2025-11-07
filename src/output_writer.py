@@ -206,7 +206,7 @@ def write_all_outputs(
 
     outputs = {}
 
-    transcript_path = output_dir / f"{episode_name}_transcript.jsonl"
+    transcript_path = output_dir / "transcript.jsonl"
     outputs['transcript_jsonl'] = write_transcript_jsonl(
         script,
         stories,
@@ -223,7 +223,7 @@ def write_all_outputs(
         audio_duration_ms
     )
 
-    show_notes_path = output_dir / f"{episode_name}_show_notes.md"
+    show_notes_path = output_dir / "show_notes.md"
     outputs['show_notes'] = write_show_notes(
         script,
         stories,

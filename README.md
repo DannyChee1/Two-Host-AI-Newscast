@@ -73,9 +73,9 @@ python main.py --personas config/personas.json --minutes 5 --topics tech
 
 This creates in the `out/` directory:
 - `episode.mp3` - Audio podcast
-- `episode_transcript.jsonl` - Timestamped transcript  
+- `transcript.jsonl` - Timestamped transcript  
 - `episode.vtt` - WebVTT subtitles
-- `episode_show_notes.md` - Show notes with source links and summaries
+- `show_notes.md` - Show notes with source links and summaries
 - `script.json` / `script.txt` - Full script
 - `stories.json` - Fetched news stories with summaries
 
@@ -165,9 +165,9 @@ Find more voices at [Cartesia Voice Library](https://play.cartesia.ai/voices)
 ```
 out/
 ├── episode.mp3                    # Final audio podcast
-├── episode_transcript.jsonl       # Timestamped transcript
+├── transcript.jsonl               # Timestamped transcript
 ├── episode.vtt                    # WebVTT subtitles
-├── episode_show_notes.md          # Show notes with source links
+├── show_notes.md                  # Show notes with source links
 ├── script.json                    # Structured script data
 ├── script.txt                     # Human-readable script
 └── stories.json                   # Fetched news stories
