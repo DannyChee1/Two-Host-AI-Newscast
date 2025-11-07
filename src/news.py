@@ -34,8 +34,7 @@ def fetch_news(
         raise NewsAPIError("No news articles found. Check your API key or try different topics.")
        
     articles = deduplicate_articles(all_articles)
-    
-    # sort by most recent published date
+
     articles = sorted(articles, key=lambda x: x.get('publishedAt', ''), reverse=True)
     
     articles = articles[:max_stories]
@@ -135,27 +134,25 @@ def deduplicate_articles(articles: List[Dict]) -> List[Dict]:
         
         if is_duplicate:
             continue
-        
+
         seen_urls.add(url)
         seen_titles.add(normalized_title)
         unique_articles.append(article)
-    
+
     return unique_articles
 
 
 def _titles_similar(title1: str, title2: str, threshold: float = 0.8) -> bool:
     words1 = set(title1.split())
     words2 = set(title2.split())
-    
+
     if not words1 or not words2:
         return False
-    
-    # Calculate Jaccard similarity
+
     intersection = len(words1.intersection(words2))
     union = len(words1.union(words2))
-    
     similarity = intersection / union if union > 0 else 0
-    
+
     return similarity >= threshold
 
 
@@ -170,9 +167,9 @@ def _create_summary(article: Dict) -> str:
         summary = re.sub(r'\[\+\d+\s+chars?\]', '', content).strip()
     else:
         summary = title
-    
-    sentences = re.split(r'(?<=[.!?])\s+', summary) 
-    summary = ' '.join(sentences[:2]) # limit to 2 sentences
+
+    sentences = re.split(r'(?<=[.!?])\s+', summary)
+    summary = ' '.join(sentences[:2])
     
     if summary and not summary[-1] in '.!?':
         summary += '.'

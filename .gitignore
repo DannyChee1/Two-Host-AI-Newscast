@@ -1,4 +1,60 @@
-dotenv
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environment
 .env
-*.env
-.env.*
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+out/
+output/
+tests/test_output/
+
+# FFmpeg (downloaded by setup script)
+ffmpeg/
+ffmpeg.zip
+
+# Audio files
+*.mp3
+*.wav
+*.ogg
+*.flac
+*.m4a
+
+# Except example/asset files if needed
+!assets/*.mp3
+!assets/*.wav

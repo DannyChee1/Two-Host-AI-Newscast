@@ -1,5 +1,6 @@
-python-dotenv
-openai
-requests
-pydub
-cartesia
+python-dotenv>=1.0.0
+openai>=1.0.0
+requests>=2.31.0
+pydub>=0.25.1
+cartesia>=2.0.0
+audioop-lts>=0.2.1; python_version >= "3.13"

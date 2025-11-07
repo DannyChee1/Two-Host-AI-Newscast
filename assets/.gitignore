@@ -1,0 +1,11 @@
+# Ignore all audio files in assets directory
+*.mp3
+*.wav
+*.ogg
+*.flac
+*.m4a
+
+# Keep the README
+!MUSIC_README.md
+!.gitignore
+
